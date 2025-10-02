@@ -31,8 +31,29 @@ function div(a, b)
     return a / b;
 }
 
-console.log(add(5, 3));
-console.log(sub(4, 7));
-console.log(mult(3, 15));
-console.log(div(3, 2));
-console.log(div(4, 0));
+//Takes two numbers and an operator
+function operate(a, b, operator)
+{
+    operation.num1 = a;
+    operation.num2 = b;
+    operation.operator = operator;
+
+
+    if (operator === "+")
+        return add(a, b);
+
+    if (operator === "-")
+        return sub(a, b);
+
+    if (operator === "x" || operator === "*")
+        return mult(a, b);
+
+    if (operator === "/")
+        return div(a, b);
+}
+
+// console.log(operate(5, 7, "-"));
+// console.log(operate(3, 5, "+"));
+// console.log(operate(5, 3, "/"));
+// console.log(operate(5, 0, "/"));
+// console.log(operate(3, 12, "*"));
