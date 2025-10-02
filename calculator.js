@@ -1,5 +1,12 @@
 //The Odin Project
 
+//Object for the calculus
+let operation = {
+    num1: null,
+    num2: null,
+    operator: null
+};
+
 //Creating the basic math operators
 function add(a, b)
 {
