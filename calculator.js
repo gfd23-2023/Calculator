@@ -45,15 +45,10 @@ function operate(a, b, operator)
     if (operator === "-")
         return sub(a, b);
 
-    if (operator === "x" || operator === "*")
+    if (operator === "×" || operator === "*")
         return mult(a, b);
 
-    if (operator === "/")
+    if (operator === "÷")
         return div(a, b);
 }
 
-// console.log(operate(5, 7, "-"));
-// console.log(operate(3, 5, "+"));
-// console.log(operate(5, 3, "/"));
-// console.log(operate(5, 0, "/"));
-// console.log(operate(3, 12, "*"));
