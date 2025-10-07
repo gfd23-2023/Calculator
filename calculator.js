@@ -71,14 +71,19 @@ function calculate()
             }
             else
             {
-                if (operation.operator === "" && id !== "equal" && id !== "del" && id !== "c" && id !== ".")
+                if (operation.operator === "" && id !== "equal" && id !== "del" && id !== "c" && id !== "." && id !== "nada")
                     operation.operator = id;
-
-                if (id === "." && operation.operator === "")
+                    
+                if (id === "." && operation.operator === "" && id !== "nada")
                     operation.num1 = operation.num1 + id;
-                else
+                else if (id === "." && operation.operator !== "" && id !== "nada")
                     operation.num2 = operation.num2 + id;
             }
+
+             console.log("Operador: " + operation.operator +
+                         "\nNum1: " + operation.num1 +
+                         "\nNum2: " + operation.num2
+             )
 
             //Updates the display
             display.innerText = operation.num1 + operation.operator + operation.num2;
